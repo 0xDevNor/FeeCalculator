@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Trading Calculator</h1>
+    <p>This tool helps you calculate the break-even price for your trades. Here's how it works:</p>
+    <ul>
+        <li><strong>Opening Price:</strong> This is the price at which you open your position.</li>
+        <li><strong>Position Size:</strong> This is the total amount of money you are putting into this position.</li>
+        <li><strong>Spread:</strong> This is the difference between the buy and sell price. It's a cost that you have to
+            cover.</li>
+        <li><strong>Fee:</strong> This is the fee charged by the exchange for the transaction.</li>
+    </ul>
+    <p>Enter your values below to calculate the break-even price.</p>
+    <form onsubmit="event.preventDefault(); calculateCosts();">
+        <label for="openPrice">Opening Price:</label>
+        <input type="number" id="openPrice" required>
+        <label for="positionSize">Position Size:</label>
+        <input type="number" id="positionSize" required>
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="results">
+        <h2>Results</h2>
+        <p>Opening Fee: <span id="openingFee"></span></p>
+        <p>Opening Spread: <span id="openingSpread"></span></p>
+        <p>Closing Fee: <span id="closingFee"></span></p>
+        <p>Closing Spread: <span id="closingSpread"></span></p>
+        <p>Total Costs: <span id="totalCosts"></span></p>
+        <p>Break Even Price: <span id="breakEvenPrice"></span></p>
+    </div>
+    <script src="script.js"></script>
+
+</div>
+<link rel="stylesheet" type="text/css" href="styles.css">
